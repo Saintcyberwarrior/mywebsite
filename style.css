@@ -1,0 +1,138 @@
+:root {
+    --primary-amber: #D4A55A;
+    --vintage-brown: #2A1F1D;
+    --parchment: #F5E6D3;
+    --ink-black: #1A120B;
+    --leather: #3E2723;
+}
+
+body.vintage-dark {
+    background: var(--vintage-brown);
+    color: var(--parchment);
+    font-family: 'Crimson Pro', serif;
+    line-height: 1.6;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    width: 280px;
+    height: 100vh;
+    background: var(--leather);
+    padding: 2rem;
+    border-right: 3px solid var(--primary-amber);
+    box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+}
+
+.branding h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--primary-amber);
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+}
+
+.nav-link {
+    color: var(--parchment);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    border-color: var(--primary-amber);
+    padding-left: 1rem;
+}
+
+/* Hero Section */
+.section-hero {
+    background: linear-gradient(rgba(42,31,29,0.9), rgba(42,31,29,0.9)),
+                url('texture-paper.png');
+    min-height: 100vh;
+}
+
+.profile-card {
+    background: var(--leather);
+    border: 2px solid var(--primary-amber);
+    box-shadow: 8px 8px 0 var(--ink-black);
+}
+
+.profile-img {
+    border: 3px solid var(--primary-amber);
+    filter: sepia(0.3) contrast(1.1);
+}
+
+/* Poetry Styles */
+.poem-card {
+    background: url('old-paper-texture.jpg');
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.poem-card:hover {
+    transform: rotate(-1deg);
+}
+
+.poem-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1rem;
+    color: var(--ink-black);
+}
+
+/* Teaching Philosophy Card */
+.philosophy-card {
+    background: var(--leather);
+    border: 1px solid var(--primary-amber);
+    position: relative;
+    padding: 2rem;
+}
+
+.ink-splash::before {
+    content: '';
+    position: absolute;
+    background: url('ink-splash.png');
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+}
+
+/* Gallery Carousel */
+.gallery-carousel {
+    border: 3px double var(--primary-amber);
+    padding: 1rem;
+}
+
+.sketch-item img {
+    filter: grayscale(0.3) contrast(1.2);
+    transition: all 0.3s ease;
+}
+
+.sketch-item:hover img {
+    filter: grayscale(0) contrast(1);
+    transform: scale(1.02);
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+blockquote {
+    border-left: 3px solid var(--primary-amber);
+    padding-left: 1.5rem;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .content-wrapper {
+        margin-left: 0;
+    }
+}
